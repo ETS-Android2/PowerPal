@@ -46,17 +46,17 @@ public class MainActivity extends AppCompatActivity {
         // authentication
         Snackbar.make(view, "Account is not valid!", Snackbar.LENGTH_LONG).show();
     }
-        public void showAbout (View view){
-            new AlertDialog.Builder(this)
-                    .setTitle("About PowerPal")
-                    .setMessage(R.string.about)
-                    .setPositiveButton("Dismiss", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
+    public void showAbout (View view){
+        new AlertDialog.Builder(this)
+                .setTitle("About PowerPal")
+                .setMessage(R.string.about)
+                .setPositiveButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
-                        }
-                    })
-                    .setIcon((android.R.drawable.ic_dialog_info))
-                    .show();
-        }
+                    }
+                })
+                .setIcon((android.R.drawable.ic_dialog_info))
+                .show();
     }
+}
