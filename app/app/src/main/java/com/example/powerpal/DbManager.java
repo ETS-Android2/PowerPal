@@ -1,48 +1,36 @@
 package com.example.powerpal;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Context;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
 
+public class DbManager extends SQLiteOpenHelper {
 
-public class DbManager extends AppCompatActivity {
+    public DbManager(Context context) {
+        super(context, "./database/powerpal.db" , null, 1);
+    }
 
-    public static boolean createNewAccount(String email, String password) {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection("jdbc:sqlite:PowerPal.db");
-            Statement stmt = conn.createStatement();
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+    }
 
-            stmt.executeUpdate("create table if not exists user (id integer primary key autoincrement, email string, password string)");
-            PreparedStatement ps = conn.prepareStatement("select * from user where email == ? ");
-            ps.setString(1, email);
-            ResultSet rs = ps.executeQuery();
-            if (!rs.next())
-                return false; // email already exists
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    }
 
-            ps = conn.prepareStatement("insert into user values(?,?)");
-            ps.setString(1, email);
-            ps.setString(1, password);
-            ps.executeQuery();
-            System.out.println("Account Created!");
-        } catch (SQLException e) {
-            System.err.println(e.getMessage());
+    public boolean searchAppliance(String name) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "select * from appliance where email like %" + name +"%", null );
+
+        if (!res.moveToFirst())
             return false;
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException e) {
-                // connection close failed.
-                System.err.println(e.getMessage());
-                return false;
-            }
-            return true;
-        }
+
+        return true;
     }
 }

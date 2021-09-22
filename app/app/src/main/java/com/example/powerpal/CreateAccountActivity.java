@@ -17,10 +17,13 @@ import com.example.powerpal.DbManager;
 
 public class CreateAccountActivity extends AppCompatActivity {
 
+    DbManager db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+        db = new DbManager(this);
     }
 
     public boolean checkPassword(String password) {
@@ -66,7 +69,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         if (validateFields()) {
             EditText enterEmail = (EditText) findViewById(R.id.editTextCreateEmail);
             EditText password = (EditText) findViewById(R.id.editTextCreatePassword);
-            if (!com.example.powerpal.DbManager.createNewAccount(enterEmail.getText().toString(), password.getText().toString())) {
+            if (!db.createNewAccount(enterEmail.getText().toString(), password.getText().toString())) {
                 enterEmail.setError("An account already exists for this email");
             }
 
