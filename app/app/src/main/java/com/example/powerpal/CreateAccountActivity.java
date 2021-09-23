@@ -69,10 +69,6 @@ public class CreateAccountActivity extends AppCompatActivity {
         if (validateFields()) {
             EditText enterEmail = (EditText) findViewById(R.id.editTextCreateEmail);
             EditText password = (EditText) findViewById(R.id.editTextCreatePassword);
-            if (!db.createNewAccount(enterEmail.getText().toString(), password.getText().toString())) {
-                enterEmail.setError("An account already exists for this email");
-            }
-
         }
     }
 }

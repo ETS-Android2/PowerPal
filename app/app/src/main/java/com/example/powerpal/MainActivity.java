@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void searchAppliance(View view) {
+        Intent intent = new Intent(this, ApplianceSearchActivity.class);
+        startActivity(intent);
+    }
+
     public void login(View view) {
         EditText enterEmail = (EditText) findViewById(R.id.editTextEmail);
         EditText password = (EditText) findViewById(R.id.editTextPassword);

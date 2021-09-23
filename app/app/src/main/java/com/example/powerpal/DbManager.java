@@ -23,13 +23,10 @@ public class DbManager extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
 
-    public boolean searchAppliance(String name) {
+    public boolean searchAppliance(String appliance) {
 
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res =  db.rawQuery( "select * from appliance where email like %" + name +"%", null );
-
-        if (!res.moveToFirst())
-            return false;
+        Cursor res =  db.rawQuery( "select * from appliance where appliance like %" + appliance +"%", null );
 
         return true;
     }
