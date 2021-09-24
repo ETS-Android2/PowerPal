@@ -30,23 +30,15 @@ jobs:
       - run:
           name: "addMe"
           command: "echo Hello, World!"
-  test:
+  android-test:
     executor:
       name: android/android-machine
-      resource-class: large
+      resource-class: xlarge
     steps:
       - checkout
-      - android/create-avd:
-          avd-name: myavd
-          install: true
-          system-image: system-images;android-29;default;x86
-      - android/start-emulator:
-          avd-name: myavd
-          no-window: true
-          restore-gradle-cache-prefix: v1a
-      - android/run-tests
-      - android/save-gradle-cache:
-          cache-prefix: v1a
+      - android/start-emulator-and-run-tests:
+          test-command: ./gradlew connectedDebugAndroidTest
+          system-image: system-images;android-30;google_apis;x86
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -54,4 +46,4 @@ workflows:
     jobs:
       - say-hello
       - addMe
-      - test
+      - android-test
