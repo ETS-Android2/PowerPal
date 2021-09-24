@@ -24,7 +24,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/applianceRecycler"
         android:layout_width="match_parent"
-        android:layout_height="622dp"
+        android:layout_height="556dp"
         android:background="@android:color/white"
         android:padding="4dp"
         android:scrollbars="vertical"

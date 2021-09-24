@@ -14,8 +14,11 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -36,17 +39,26 @@ public class ApplianceSearchActivity extends AppCompatActivity {
         createExampleList();
         buildRecyclerView();
 
-
         EditText editText = findViewById(R.id.applianceSearchField);
+
+        //https://stackoverflow.com/questions/7397391/event-for-handling-the-focus-of-the-edittext
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (hasFocus) {
+                    if(editText.getText().toString().equals("Enter Appliance Name"))
+                        editText.setText("");
+                }
+            }
+        });
+
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override

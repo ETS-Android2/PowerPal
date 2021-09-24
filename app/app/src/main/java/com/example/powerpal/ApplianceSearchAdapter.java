@@ -57,4 +57,5 @@ public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearch
         applianceList = filteredList;
         notifyDataSetChanged();
     }
+    
 }
