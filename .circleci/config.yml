@@ -11,7 +11,7 @@ jobs:
   unit-test:
     executor:
       name: android/android-machine
-      resource-class: xlarge
+      resource-class: medium
     steps:
       - checkout
       - android/restore-gradle-cache
