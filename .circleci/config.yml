@@ -136,7 +136,7 @@ jobs:
       - run:
           name: Assemble release build
           command: |
-            ./gradlew assembleRelease
+            ./app/gradlew assembleRelease
       - store_artifacts:
           path: app/app/build/outputs/apk/release/app-release-unsigned.apk
 workflows:
