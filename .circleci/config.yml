@@ -5,6 +5,18 @@ orbs:
   gcp-cli: circleci/gcp-cli@2.2.0
 
 jobs:
+  say-hello:
+    # Specify the execution environment.
+    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+    docker:
+      - image: cimg/base:stable
+    # Add steps to the job
+    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command: "echo Hello, World!"
   unit-test:
     executor:
       name: android/android-machine
@@ -127,18 +139,6 @@ jobs:
             ./gradlew assembleRelease
       - store_artifacts:
           path: app/app/build/outputs/apk/release/app-release-unsigned.apk
-say-hello:
-  # Specify the execution environment.
-  # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-  docker:
-    - image: cimg/base:stable
-  # Add steps to the job
-  # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-  steps:
-    - checkout
-    - run:
-        name: "Say hello"
-        command: "echo Hello, World!"
 workflows:
   say-hello-workflow:
     jobs:
