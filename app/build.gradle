@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.2"
@@ -14,4 +15,8 @@ buildscript {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+task test {
+    dependsOn 'app:testDebugUnitTest'
 }
