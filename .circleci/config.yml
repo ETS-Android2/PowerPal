@@ -26,7 +26,7 @@ jobs:
       - android/restore-gradle-cache
       - android/restore-build-cache
       - android/run-tests:
-          test-command: sh sh ./app/gradlew testDebugUnitTest
+          test-command: sh ./app/gradlew testDebugUnitTest
       - android/save-gradle-cache
       - android/save-build-cache
       - run:
@@ -51,7 +51,7 @@ jobs:
     steps:
       - checkout
       - android/start-emulator-and-run-tests:
-          test-command: sh sh ./app/gradlew connectedDebugAndroidTest
+          test-command: sh ./app/gradlew connectedDebugAndroidTest
           system-image: << parameters.system-image >>
       - run:
           name: Save test results
