@@ -8,6 +8,23 @@ orbs:
   android: circleci/android@1.0.3
 
 jobs:
+  test:
+    executor:
+      name: android/android-machine
+      resource-class: large
+    steps:
+      - checkout
+      - android/create-avd:
+          avd-name: myavd
+          install: true
+          system-image: system-images;android-29;default;x86
+      - android/start-emulator:
+          avd-name: myavd
+          no-window: true
+          restore-gradle-cache-prefix: v1a
+      - android/run-tests
+      - android/save-gradle-cache:
+          cache-prefix: v1a
   unit-test:
     executor:
       name: android/android-machine
@@ -48,7 +65,7 @@ jobs:
 workflows:
   test-and-build:
     jobs:
-      - unit-test
+      - test
   say-hello-workflow:
     jobs:
       - say-hello
