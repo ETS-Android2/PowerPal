@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">PowerPal</string>
-    <string name="about">PowerPal is a web-based application
-        for the Android operating system. PowerPal informs
-        users of areas of inefficient energy usage in their lives,
-        and provides suggestions for more sustainable alternatives,
-        as well as showcasing the potential cost and emissions savings
-        from making more efficient energy decisions.</string>
-</resources>
