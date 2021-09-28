@@ -5,6 +5,8 @@ orbs:
 
 jobs:
   say-hello:
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout
       - run:
