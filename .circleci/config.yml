@@ -34,6 +34,14 @@ jobs:
           path: ~/test-results
       - store_artifacts:
           path: ~/test-results/junit
+  say-two:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command:  "echo Hello, World!"
 
 
 workflows:
