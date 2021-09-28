@@ -4,6 +4,12 @@ orbs:
   android: circleci/android@1.0.3
 
 jobs:
+  say-hello:
+    steps:
+      - checkout
+      - run:
+          name: "Say hello"
+          command:  "echo Hello, World!"
   unit-test:
     executor:
       name: android/android-machine
@@ -31,5 +37,6 @@ jobs:
 workflows:
   test-and-build:
     jobs:
+      - say-hello
       - unit-test
    
