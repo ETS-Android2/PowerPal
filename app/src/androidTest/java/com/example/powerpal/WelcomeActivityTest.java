@@ -13,6 +13,6 @@ public class WelcomeActivityTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.powerpal", appContext.getPackageName());
+        assertEquals("com.example.powerpalQ", appContext.getPackageName());
     }
 }
