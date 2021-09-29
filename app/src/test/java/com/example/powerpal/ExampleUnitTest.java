@@ -25,6 +25,6 @@ public class ExampleUnitTest {
         // Context of the app under test.
         //Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         //appContext.getPackageName()
-        assertEquals("com.example.powerpal", "com.example.powerpal");
+        assertEquals("com.example.powerpalFAIL", "com.example.powerpal");
     }
 }
