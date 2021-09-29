@@ -15,4 +15,10 @@ public class WelcomeActivityTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.powerpalQ", appContext.getPackageName());
     }
+
+    @Test
+    public void dumAddFail() {
+        // Context of the app under test.
+        assertEquals(4, 4);
+    }
 }
