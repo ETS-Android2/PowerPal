@@ -26,6 +26,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    // Added 9/28
     testOptions {
         unitTests.all {
             // All the usual Gradle options.
