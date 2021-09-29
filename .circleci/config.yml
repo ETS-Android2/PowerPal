@@ -40,7 +40,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
           command:  "echo Hello, World!"
 
 
@@ -49,4 +48,5 @@ workflows:
     jobs:
       - say-hello
       - unit-test
+      - say-two
    
