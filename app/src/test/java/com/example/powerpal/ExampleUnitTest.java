@@ -4,6 +4,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import android.content.Context;
+
+import androidx.test.platform.app.InstrumentationRegistry;
+
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
@@ -13,5 +17,13 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+    }
+
+
+    @Test
+    public void useAppContext() {
+        // Context of the app under test.
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        assertEquals("com.example.powerpal", appContext.getPackageName());
     }
 }
