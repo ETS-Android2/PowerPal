@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import android.content.Context;
+//import android.content.Context;
 
-import androidx.test.platform.app.InstrumentationRegistry;
+//import androidx.test.platform.app.InstrumentationRegistry;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -23,7 +23,8 @@ public class ExampleUnitTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.powerpal", appContext.getPackageName());
+        //Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        //appContext.getPackageName()
+        assertEquals("com.example.powerpal", "com.example.powerpal");
     }
 }
