@@ -9,7 +9,9 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: Java WelcomeActivityTest.java
+      - run:
+          name: "Say hello"
+          command:  "echo Hello, World!"
   unit-test:
     executor:
       name: android/android-machine
