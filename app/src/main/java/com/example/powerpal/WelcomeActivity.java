@@ -34,8 +34,4 @@ public class WelcomeActivity extends AppCompatActivity {
                 .setIcon((android.R.drawable.ic_dialog_info))
                 .show();
     }
-
-    public int dummyMathThing(int x, int y){
-        return x + y;
-    }
 }
