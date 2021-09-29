@@ -9,9 +9,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command:  "echo Hello, World!"
+      - run: my-test-commands
   unit-test:
     executor:
       name: android/android-machine
