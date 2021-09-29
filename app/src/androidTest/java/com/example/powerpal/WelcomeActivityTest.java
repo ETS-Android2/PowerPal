@@ -19,6 +19,6 @@ public class WelcomeActivityTest {
     @Test
     public void dumAddFail() {
         // Context of the app under test.
-        assertEquals(4, 4);
+        assertEquals(45, 4);
     }
 }
