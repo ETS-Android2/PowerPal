@@ -19,6 +19,10 @@ public class WelcomeActivityTest {
     @Test
     public void dumAddFail() {
         // Context of the app under test.
-        assertEquals(45, 4);
+        assertEquals(45, dummyMathThing(4, 5));
+    }
+
+    private int dummyMathThing(int x, int y) {
+        return x + y;
     }
 }
