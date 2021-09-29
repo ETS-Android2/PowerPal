@@ -9,7 +9,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: my-test-commands
+      - run: Java WelcomeActivityTest.java
   unit-test:
     executor:
       name: android/android-machine

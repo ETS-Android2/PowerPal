@@ -17,7 +17,7 @@ public class WelcomeActivityTest {
     }
 
     @Test
-    public void dumAddFail() {
+    public void test() {
         // Context of the app under test.
         assertEquals(45, dummyMathThing(4, 5));
     }
