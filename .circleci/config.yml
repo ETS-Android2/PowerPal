@@ -34,15 +34,6 @@ jobs:
           path: ~/test-results
       - store_artifacts:
           path: ~/test-results/junit
-  android-test:
-    executor:
-      name: android/android-machine
-      resource-class: medium
-    steps:
-      - checkout
-      - android/start-emulator-and-run-tests:
-          test-command: ./gradlew connectedDebugAndroidTest
-          system-image: system-images;android-21;google_apis;x86
 
 
 workflows:
@@ -50,5 +41,4 @@ workflows:
     jobs:
       - say-hello
       - unit-test
-      - android-test
    
