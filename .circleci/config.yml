@@ -50,5 +50,5 @@ workflows:
     jobs:
       - say-hello
       - unit-test
-      - say-two
+      - android-test
    
