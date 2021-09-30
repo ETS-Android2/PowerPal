@@ -17,3 +17,6 @@ PowerPal is a web-based application for the Android operating system. PowerPal i
 
 ## Product Vision
 FOR conscientious consumers of traditional, inefficient energy sources WHO desire a streamlined and automated guidance platform for making informed energy consumption decisions. THE PowerPal application is a mobile web-based app backed by IBM’s weather services THAT generates actionable alerts for users by providing environmental and financial information and action steps regarding weather events (extreme heat, heavy winds, etc.), alternative sources of energy, and daily changes that can reduce one’s carbon footprint. UNLIKE traditional weather service apps or basic energy consumption trackers that merely provide data and generic insight, OUR PRODUCT proactively engages with the user to encourage meaningful actions that benefit the individual and the global community.
+
+## Acknowledged Source
+CircleCI configuration and Gradle builds based on https://github.com/CircleCI-Public/android-testing-circleci-examples
