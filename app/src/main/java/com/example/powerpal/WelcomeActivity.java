@@ -15,12 +15,12 @@ public class WelcomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
     }
-    /*
-        public void createAccount(View view) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        }
-    */
+
+    public void showAppliance(View view) {
+        Intent intent = new Intent(this, ApplianceSearchActivity.class);
+        startActivity(intent);
+    }
+
     public void showAbout (View view){
         new AlertDialog.Builder(this)
                 .setTitle("About PowerPal")
