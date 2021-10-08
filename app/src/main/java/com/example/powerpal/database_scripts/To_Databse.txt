@@ -1,5 +1,0 @@
-Run the below commands in SQLite3 from terminal in the powerpal folder (one up)
-
-.mode csv
-.import ./database_scripts/appliance_consumption.csv appliance
-.save powerpal.db

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,28 +18,33 @@ import java.util.ArrayList;
 public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearchAdapter.ViewHolder> {
     private ArrayList<ApplianceItem> applianceList;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView applianceName;
         public TextView applianceSpecs;
 
+
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             applianceName = itemView.findViewById(R.id.applianceName);
             applianceSpecs = itemView.findViewById(R.id.applianceSpecs);
 
+        }
+
+        @Override
+        public void onClick(View view) {
+                Toast.makeText(view.getContext(), "position = ", Toast.LENGTH_SHORT).show();
         }
     }
 
     public ApplianceSearchAdapter(ArrayList<ApplianceItem> _applianceList) {
         applianceList = _applianceList;
     }
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.appliance_item,
                 parent, false);
-        ViewHolder evh = new ViewHolder(v);
-        return evh;
+        return new ViewHolder(v);
     }
 
     @Override
@@ -57,5 +63,6 @@ public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearch
         applianceList = filteredList;
         notifyDataSetChanged();
     }
-    
+
+
 }

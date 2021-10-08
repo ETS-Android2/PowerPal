@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:text="line 1"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <TextView
@@ -29,6 +29,6 @@
             android:layout_marginStart="8dp"
             android:text="line 2"
             android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:textSize="10sp" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
