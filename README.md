@@ -1,7 +1,6 @@
 # PowerPal
 CEN3031 Term Project
 
-
 ## Team Name 
 Super Fun Adventure Club Dude Man Squad
 
