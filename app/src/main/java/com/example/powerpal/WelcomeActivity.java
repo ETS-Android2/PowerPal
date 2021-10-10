@@ -34,4 +34,9 @@ public class WelcomeActivity extends AppCompatActivity {
                 .setIcon((android.R.drawable.ic_dialog_info))
                 .show();
     }
+
+    public void openHome (View view) {
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
 }

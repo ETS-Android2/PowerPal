@@ -1,4 +1,4 @@
-package com.example.powerpal.ui.gallery;
+package com.example.powerpal.ui.weather;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,24 +12,23 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.powerpal.R;
-import com.example.powerpal.databinding.FragmentGalleryBinding;
+import com.example.powerpal.databinding.FragmentWeatherBinding;
 
-public class GalleryFragment extends Fragment {
+public class WeatherFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
-    private FragmentGalleryBinding binding;
+    private WeatherViewModel weatherViewModel;
+    private FragmentWeatherBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        weatherViewModel =
+                new ViewModelProvider(this).get(WeatherViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentWeatherBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        final TextView textView = binding.textWeather;
+        weatherViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
