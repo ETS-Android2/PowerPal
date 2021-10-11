@@ -7,4 +7,15 @@
         as well as showcasing the potential cost and emissions savings
         from making more efficient energy decisions.</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">PowerPal</string>
+    <string name="nav_header_subtitle"></string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_appliances">Appliances</string>
+    <string name="menu_weather">Weather</string>
 </resources>
