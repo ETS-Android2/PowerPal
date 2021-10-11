@@ -2,6 +2,7 @@ package com.example.powerpal;
 // https://gist.github.com/codinginflow/ea0d9aeb791fb2eac190befcec448909
 
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,13 +17,12 @@ import java.util.ArrayList;
 
 
 public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearchAdapter.ViewHolder> {
-    private ArrayList<ApplianceItem> applianceList;
+    private static ArrayList<ApplianceItem> applianceList;
     public static ListItemClickListener mOnClickListener;
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView applianceName;
         public TextView applianceSpecs;
-
 
 
         public ViewHolder(View itemView) {
@@ -35,8 +35,19 @@ public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearch
 
         @Override
         public void onClick(View view) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+
+                }
+            });
+        }
+
+        private void runOnUiThread(Runnable runnable) {
             int position = getAdapterPosition();
-            mOnClickListener.onListItemClick(position);
+            String[] specs = applianceList.get(position).getApplianceSpecs().split(" ", 0);
+            if (specs[5].equals("N/A"))
+                specs[5] = String.valueOf(0);
+            mOnClickListener.onListItemClick(position,applianceList.get(position).getApplianceName(),Float.parseFloat(specs[1]), Float.parseFloat(specs[3]), Float.parseFloat(specs[5]));
         }
     }
 
@@ -63,14 +74,13 @@ public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearch
         return applianceList.size();
     }
 
-
     public void filterList(ArrayList<ApplianceItem> filteredList) {
         applianceList = filteredList;
         notifyDataSetChanged();
     }
 
     interface ListItemClickListener{
-        void onListItemClick(int position);
+        void onListItemClick(int position1, String s, float parseInt, float i, float position);
     }
 
 }

@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.EditText;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.FileNotFoundException;
@@ -82,8 +83,17 @@ public class ApplianceSearchActivity extends AppCompatActivity implements Applia
     }
     
     @Override
-    public void onListItemClick(int position) {
-        System.out.println(applianceList.get(position).getApplianceName());
+    public void onListItemClick(int position, String recentlyAdded, float max, float min, float idle) {
+        TextView added = findViewById(R.id.recentlyAdded);
+        TextView newMax = findViewById(R.id.minWattVal);
+        TextView newMin = findViewById(R.id.maxWattVal);
+        TextView newIdle = findViewById(R.id.idleWattVal);
+
+        added.setText("     " + recentlyAdded + " added!");
+        newMax.setText(String.valueOf(Float.parseFloat(newMax.getText().toString()) + max));
+        newMin.setText(String.valueOf(Float.parseFloat(newMin.getText().toString()) + min));
+        newIdle.setText(String.valueOf(Float.parseFloat(newIdle.getText().toString()) + idle));
+
     }
 
     private ArrayList createApplianceList() {

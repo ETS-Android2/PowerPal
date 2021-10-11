@@ -65,7 +65,7 @@
             app:layout_constraintVertical_bias="0.926" />
 
         <TextView
-            android:id="@+id/minWattVal2"
+            android:id="@+id/minWattVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
@@ -94,7 +94,7 @@
             app:layout_constraintVertical_bias="0.87" />
 
         <TextView
-            android:id="@+id/maxWattVal2"
+            android:id="@+id/maxWattVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
@@ -127,7 +127,7 @@
                 app:layout_constraintVertical_bias="0.982" />
 
             <TextView
-                android:id="@+id/idleWattVal2"
+                android:id="@+id/idleWattVal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -152,6 +152,17 @@
             android:layout_height="match_parent" />
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/recentlyAdded"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="2.927" />
 
 </LinearLayout>
 
