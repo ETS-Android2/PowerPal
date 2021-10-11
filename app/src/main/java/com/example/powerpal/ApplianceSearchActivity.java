@@ -24,21 +24,20 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ApplianceSearchActivity extends AppCompatActivity {
+public class ApplianceSearchActivity extends AppCompatActivity implements ApplianceSearchAdapter.ListItemClickListener{
 
 //    DbManager db =  new DbManager(this);
-    private ArrayList<ApplianceItem> applianceList;
-
+    public ArrayList<ApplianceItem> applianceList = new ArrayList<>();
     private RecyclerView applianceView;
-    private ApplianceSearchAdapter applianceAdapter;
+    private ApplianceSearchAdapter applianceAdapter = new ApplianceSearchAdapter(createApplianceList(), this);
     private RecyclerView.LayoutManager layoutManager;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appliance_search);
-        createExampleList();
         buildRecyclerView();
 
         EditText editText = findViewById(R.id.applianceSearchField);
@@ -81,10 +80,14 @@ public class ApplianceSearchActivity extends AppCompatActivity {
         }
         applianceAdapter.filterList(filteredList);
     }
+    
+    @Override
+    public void onListItemClick(int position) {
+        System.out.println(applianceList.get(position).getApplianceName());
+    }
 
-    private void createExampleList() {
+    private ArrayList createApplianceList() {
 //        boolean test = db.getAppliance();
-        applianceList = new ArrayList<>();
         applianceList.add(new ApplianceItem("100W light bulb (Incandescent)","Min: 100 Max: 100 Standby: 0"));
         applianceList.add(new ApplianceItem("22 Inch LED TV","Min: 17 Max: 17 Standby: 0.5"));
         applianceList.add(new ApplianceItem("25 Inch colour TV","Min: 150 Max: 150 Standby: N/A"));
@@ -234,13 +237,15 @@ public class ApplianceSearchActivity extends AppCompatActivity {
         applianceList.add(new ApplianceItem("Window Air Conditioner","Min: 500 Max: 1500 Standby: N/A"));
         applianceList.add(new ApplianceItem("Wine cooler (18 bottles)","Min: 83 Max: 83 Standby: 0"));
         applianceList.add(new ApplianceItem("Xbox One","Min: 50 Max: 110 Standby: 14"));
+        return applianceList;
+
     }
 
     private void buildRecyclerView() {
         applianceView = findViewById(R.id.applianceRecycler);
         applianceView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
-        applianceAdapter = new ApplianceSearchAdapter(applianceList);
+
 
         applianceView.setLayoutManager(layoutManager);
         applianceView.setAdapter(applianceAdapter);

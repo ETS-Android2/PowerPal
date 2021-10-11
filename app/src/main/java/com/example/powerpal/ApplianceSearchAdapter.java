@@ -17,10 +17,12 @@ import java.util.ArrayList;
 
 public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearchAdapter.ViewHolder> {
     private ArrayList<ApplianceItem> applianceList;
+    public static ListItemClickListener mOnClickListener;
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView applianceName;
         public TextView applianceSpecs;
+
 
 
         public ViewHolder(View itemView) {
@@ -33,12 +35,14 @@ public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearch
 
         @Override
         public void onClick(View view) {
-                Toast.makeText(view.getContext(), "position = ", Toast.LENGTH_SHORT).show();
+            int position = getAdapterPosition();
+            mOnClickListener.onListItemClick(position);
         }
     }
 
-    public ApplianceSearchAdapter(ArrayList<ApplianceItem> _applianceList) {
+    public ApplianceSearchAdapter(ArrayList<ApplianceItem> _applianceList, ListItemClickListener onClickListener) {
         applianceList = _applianceList;
+        this.mOnClickListener = onClickListener;
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -59,10 +63,14 @@ public class ApplianceSearchAdapter extends RecyclerView.Adapter<ApplianceSearch
         return applianceList.size();
     }
 
+
     public void filterList(ArrayList<ApplianceItem> filteredList) {
         applianceList = filteredList;
         notifyDataSetChanged();
     }
 
+    interface ListItemClickListener{
+        void onListItemClick(int position);
+    }
 
 }
