@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:cardCornerRadius="4dp">
+
+
+        <TextView
+            android:id="@+id/applianceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="line 1"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/applianceSpecs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/applianceName"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:text="line 2"
+            android:textColor="@android:color/black"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,150 @@
+Appliance,Minimum,Maximum,Standby
+100W light bulb (Incandescent),100,100,0
+22 Inch LED TV,17,17,0.5
+25 Inch colour TV,150,150,
+3 Inch belt sander,1000,1000,
+32 Inch LED TV,20,60,1
+42 Inch LED TV,58,60,0.3
+46 Inch LED TV,60,70,1
+49 Inch LED TV,85,85,1
+55 Inch LED TV,116,116,0.5
+60W light bulb (Incandescent),60,60,0
+65 Inch LED TV,120,130,1
+82 Inch LED TV,228,295,0.5
+9 Inch disc sander,1200,1200,
+Air Cooler,65,80,
+Air Fryer,1500,1500,
+Air Purifier,25,30,
+Amazon Echo,3,3,2
+Amazon Echo Dot,2,3,
+Amazon Echo Show,2,4,0.1
+American-Style Fridge Freezer,40,80,
+Apple TV,3,6,0.3
+Aquarium Pump,20,50,
+AV Receiver,450,450,
+Bathroom Towel Heater,60,150,
+Ceiling Fan,60,70,0
+Chromebook,45,45,
+Chromecast,2,2,
+Clock radio,1,2,
+Clothes Dryer,1000,4000,
+Coffee Maker,800,1400,
+Computer Monitor,25,30,
+Cooker Hood,20,30,0
+Corded Drill,600,850,
+Corded Electric Handheld Leaf Blower,2500,2500,
+Cordless Drill Charger,70,150,
+Curling Iron,25,35,0
+DAB Mains Radio,5,9,
+Deep Freezer,19,19,
+Dehumidifier,240,240,
+Desktop Computer,100,450,
+Dishwasher,1200,1500,
+Domestic Water Pump,200,300,0
+DVD Player,26,60,
+Electric Blanket,200,200,
+Electric Boiler,4000,14000,
+Electric Doorbell Transformer,2,2,
+Electric Heater Fan,2000,3000,
+Electric Kettle,1200,3000,0
+Electric Mower,1500,1500,
+Electric Pressure Cooker,1000,1000,
+Electric Shaver,15,20,
+Electric stove,2000,2000,
+Electric Tankless Water Heater,6600,8800,
+Electric Thermal Radiator,500,500,
+Espresso Coffee Machine,1300,1500,
+EV Car Charger,2000,7000,
+EV Home Charger,1600,3400,
+Evaporative Air Conditioner,2600,2600,
+External Hard Drive,1,3,
+Extractor Fan,12,12,
+Fluorescent Lamp,28,45,
+Food Blender,300,400,
+Food Dehydrator,800,800,
+Freezer,30,50,
+Fridge,100,220,
+Fridge / Freezer,150,400,
+Fryer,1000,1000,
+Game Console,120,200,
+Gaming PC,300,600,1
+Garage Door Opener,300,400,
+Google Home Mini,15,15,2
+Guitar Amplifier,20,30,
+Hair Blow Dryer,1800,2500,
+Hand Wash Oversink Water Heater,3000,3000,
+Heated Bathroom Mirror,50,100,
+Heated Hair Rollers,400,400,
+Home Air Conditioner,1000,4000,
+Home Internet Router,5,15,
+Home Phone,3,5,2
+Home Sound System,95,95,1
+Hot Water Dispenser,1200,1300,
+Hot Water Immersion Heater,3000,3000,
+Humidifier,35,40,
+iMac,60,240,1
+Induction Hob (per hob),1400,1800,
+Inkjet Printer,20,30,
+Inverter Air conditioner,1300,1800,
+Iron,1000,1000,
+Jacuzzi,3000,7500,1500
+Kitchen Extractor Fan,200,200,
+Laptop Computer,50,100,
+Laser Printer,600,800,
+Lawnmower,1000,1400,
+LED Christmas Lights,5,5,
+LED Light Bulb,7,10,0
+Mi Box,5,7,3
+Microwave,600,1700,3
+Night Light,1,1,0
+Nintendo Switch AC Adapter,7,40,
+Outdoor Hot Tub,60,500,
+Oven,2150,2150,
+Paper Shredder,200,220,
+Pedestal Fan,50,60,
+Percolator,800,1100,
+Philips Hue Smart Bulb,8,9,0.4
+Phone Charger,4,7,
+Playstation 4,85,90,
+Playstation 5,160,200,
+Portable Air Conditioner,1000,1200,
+Power Shower,7500,10500,0
+Pressure Cooker,700,700,
+Pressure Washer,1500,1500,
+Projector,220,270,1
+Refrigerator,100,200,
+Rice Cooker,200,800,
+Sandwich Maker,700,1000,
+Scanner,10,18,
+Set Top Box,27,30,
+Sewing Machine,70,80,
+Singer Sewing Machine,100,100,
+Sky Q 2TB Box,40,40,
+Slow Cooker,160,180,
+Smoke Detector,0,1,
+Space Heater,2000,5000,
+Steam Iron,2200,2500,
+Steriliser,650,650,
+Straightening Iron,75,300,
+Strimmer,300,500,
+Submersible Water Pump,200,400,
+Table Fan,10,25,
+Table Top Fridge,10,15,
+Tablet Charger,10,15,
+Tablet Computer,5,10,
+Toaster,800,1800,0
+Tower Fan,60,60,
+Treadmill,280,900,
+Tube Light (1500mm),22,22,
+TV (19 Inch colour),40,100,1
+Vacuum Cleaner,450,900,0
+Wall Fan,45,60,0
+Washing Machine,500,500,1
+Water Dispenser,100,100,
+Water Feature,35,35,
+Water Filter and Cooler,70,100,
+WiFi Booster,1,2,
+WiFi Router,4,10,4
+Window Air Conditioner,500,1500,
+Wine cooler (18 bottles),83,83,0
+Xbox One,50,110,14
