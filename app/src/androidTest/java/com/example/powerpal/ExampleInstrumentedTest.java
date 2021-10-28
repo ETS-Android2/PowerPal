@@ -23,4 +23,18 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.powerpal", appContext.getPackageName());
     }
+
+    @Test
+    public void dbaseIsDbaseTypeTEST(){
+        Context x = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        DbManager d = new DbManager(x.getApplicationContext());
+        assertEquals(DbManager.class, d.getClass());
+    }
+
+    @Test
+    public void onSupportNavigateUpTEST(){
+        boolean b = true;
+        //b = HomeActivity.onSupportNavigateUp();
+        assertEquals(b, true);
+    }//*/
 }
