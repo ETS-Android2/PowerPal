@@ -38,7 +38,7 @@ public class ApplianceSearchActivity extends AppCompatActivity implements Applia
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_appliance_search);
+        setContentView(R.layout.fragment_appliances);
         buildRecyclerView();
 
         EditText editText = findViewById(R.id.applianceSearchField);
@@ -88,7 +88,6 @@ public class ApplianceSearchActivity extends AppCompatActivity implements Applia
         TextView newMax = findViewById(R.id.minWattVal);
         TextView newMin = findViewById(R.id.maxWattVal);
         TextView newIdle = findViewById(R.id.idleWattVal);
-
         added.setText("     " + recentlyAdded + " added!");
         newMax.setText(String.valueOf(Float.parseFloat(newMax.getText().toString()) + max));
         newMin.setText(String.valueOf(Float.parseFloat(newMin.getText().toString()) + min));
