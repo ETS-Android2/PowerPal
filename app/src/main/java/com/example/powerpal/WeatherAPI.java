@@ -80,7 +80,7 @@ public class WeatherAPI extends AppCompatActivity {
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)!= PackageManager.PERMISSION_GRANTED ){
             ActivityCompat.requestPermissions( WeatherAPI.this, new String [] { Manifest.permission.ACCESS_FINE_LOCATION , Manifest.permission.ACCESS_COARSE_LOCATION },PERMISSION_CODE) ;
         }
-        Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        Location location = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
         cityName = getCityName(location.getLongitude(),location.getAltitude());
         getWeatherInfo(cityName);
 

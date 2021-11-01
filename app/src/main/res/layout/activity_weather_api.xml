@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black_shade"
+    android:background="@color/teal_200"
     tools:context=".WeatherAPI">
 
     <ProgressBar
@@ -12,26 +12,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:visibility="visible" />
+        android:visibility="gone" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id = "@+id/idRLHome"
-        android:visibility="gone"
+        android:visibility="visible"
         >
 
         <ImageView
-            android:id = "@+id/idIVBack"
+            android:id="@+id/idIVBack"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src = "@color/black_shade"
-            />
+            android:src="@color/black_shade" />
+
         <TextView
             android:id = "@+id/idTVCityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="City Name"
+            android:text="Gainesville"
             android:textAlignment="center"
             android:gravity="center"
             android:textColor="@color/white"
@@ -86,27 +86,47 @@
                 />
 
         </LinearLayout>
+
         <TextView
+            android:id="@+id/idTVTemperature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/idTVTemperature"
             android:layout_below="@id/idLLEdit"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center_horizontal"
             android:padding="5dp"
-            android:text="23"
+            android:text="75"
             android:textColor="@color/white"
-            android:textSize="70dp"
-            />
-        <ImageView
-            android:layout_width="wrap_content"
+            android:textSize="70dp" />
+
+        <TextView
+            android:id="@+id/idTVTemperature2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/idIVIcon"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Cloudy"
+            android:textColor="@color/white"
+            android:textSize="70dp" />
+        <ImageView
             android:id="@+id/idIVIcon"
-            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_below="@id/idTVTemperature"
-            android:layout_margin="10dp"
-            android:src="@mipmap/ic_launcher"
-            />
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_cloud" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -123,7 +143,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_marginBottom="10dp"
-            android:text="Today weather Forcast"
+            android:text="Future weather Forcast"
             android:textColor="@color/white"
             android:layout_above="@id/idRvWeather"
             android:textStyle="bold"
