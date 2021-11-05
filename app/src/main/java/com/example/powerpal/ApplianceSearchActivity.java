@@ -1,34 +1,21 @@
 package com.example.powerpal;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewTreeObserver;
 import android.widget.EditText;
-import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class ApplianceSearchActivity extends AppCompatActivity implements ApplianceSearchAdapter.ListItemClickListener{
 
 //    DbManager db =  new DbManager(this);
-    public ArrayList<ApplianceItem> applianceList = new ArrayList<>();
+    public static ArrayList<ApplianceItem> applianceList = new ArrayList<>();
     private RecyclerView applianceView;
     private ApplianceSearchAdapter applianceAdapter = new ApplianceSearchAdapter(createApplianceList(), this);
     private RecyclerView.LayoutManager layoutManager;
@@ -95,7 +82,7 @@ public class ApplianceSearchActivity extends AppCompatActivity implements Applia
 
     }
 
-    private ArrayList createApplianceList() {
+    private static ArrayList createApplianceList() {
 //        boolean test = db.getAppliance();
         applianceList.add(new ApplianceItem("100W light bulb (Incandescent)","Min: 100 Max: 100 Standby: 0"));
         applianceList.add(new ApplianceItem("22 Inch LED TV","Min: 17 Max: 17 Standby: 0.5"));
@@ -250,6 +237,11 @@ public class ApplianceSearchActivity extends AppCompatActivity implements Applia
 
     }
 
+    public void addNewApp(String name, String min, String max, String idle){
+        applianceList.add(new ApplianceItem(name,"Min: " + min + " Max: " + max + " Standby: " + idle));
+        applianceAdapter.filterList(applianceList);
+    }
+
     private void buildRecyclerView() {
         applianceView = findViewById(R.id.applianceRecycler);
         applianceView.setHasFixedSize(true);
@@ -258,6 +250,11 @@ public class ApplianceSearchActivity extends AppCompatActivity implements Applia
 
         applianceView.setLayoutManager(layoutManager);
         applianceView.setAdapter(applianceAdapter);
+    }
+
+    public void showNewAppliance(View view) {
+        Intent intent = new Intent(this, NewApplianceActivity.class);
+        startActivity(intent);
     }
 
 }
