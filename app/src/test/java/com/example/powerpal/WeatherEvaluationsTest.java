@@ -25,6 +25,6 @@ public class WeatherEvaluationsTest {
     @Test
     public void rainYesOrNoTEST() {
         WeatherEvaluations x = new WeatherEvaluations();
-        assertSame("yes", x.rainYesOrNo(85, 10, 69));
+        assertSame("yesP", x.rainYesOrNo(85, 10, 69));
     }
 }
