@@ -38,15 +38,18 @@ jobs:
       - store_artifacts:
           path: ~/test-results/junit
   my-test:
-    docker:
-      - image: cimg/base:stable
+    executor:
+      name: android/android-machine
+      resource-class: medium
     steps:
       - checkout
-      - run:  ExampleInstrumentedTest
+      - android/start-emulator-and-run-tests:
+          test-command: ./gradlew connectedDebugAndroidTest
+          system-image: system-images;android-30;google_apis;x86
 
 workflows:
   test-and-build:
     jobs:
-      - unit-test
-      #- my-test
+      #- unit-test
+      - my-test
       #- say-hello
