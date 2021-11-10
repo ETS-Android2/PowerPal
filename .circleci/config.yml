@@ -29,6 +29,7 @@ jobs:
       - run:
           name: Save test results
           command:
+              WeatherEvaluationsTest
               |
               mkdir -p ~/test-results/junit/
               find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
