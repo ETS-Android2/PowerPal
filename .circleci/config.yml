@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command:  "echo Hello, World!"
+          command:  echo "Hello, World!"
   unit-test:
     executor:
       name: android/android-machine
