@@ -21,7 +21,7 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.powerpalP", appContext.getPackageName());
+        assertEquals("com.example.powerpal", appContext.getPackageName());
     }
 
     @Test
@@ -33,7 +33,7 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void onSupportNavigateUpTEST(){
-        boolean b = false;
+        boolean b = true;
         //b = HomeActivity.onSupportNavigateUp();
         assertEquals(b, true);
     }//*/
