@@ -13,7 +13,7 @@ jobs:
           name: "Say hello"
           command:
             WeatherEvaluationsTest
-            echo "Hello, World!"
+            #echo "Hello, World!"
   unit-test:
     executor:
       name: android/android-machine
