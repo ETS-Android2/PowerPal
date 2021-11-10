@@ -24,12 +24,12 @@ jobs:
       - android/run-tests:
           test-command:
             sh ./gradlew testDebugUnitTest
+            ExampleInstrumentedTest
       - android/save-gradle-cache
       - android/save-build-cache
       - run:
           name: Save test results
           command:
-              ExampleInstrumentedTest
               |
               mkdir -p ~/test-results/junit/
               find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
