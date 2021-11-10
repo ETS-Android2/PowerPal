@@ -42,10 +42,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command:
-            ExampleInstrumentedTest
+      - run:  ExampleInstrumentedTest
 
 workflows:
   test-and-build:
