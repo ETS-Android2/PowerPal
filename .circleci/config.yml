@@ -13,6 +13,7 @@ jobs:
           name: "Say hello"
           command:
             echo "Hello, World!"
+            echo "Bye bye, Bitch!"
   unit-test:
     executor:
       name: android/android-machine
@@ -28,7 +29,8 @@ jobs:
       - android/save-build-cache
       - run:
           name: Save test results
-          command: |
+          command:
+              |
               mkdir -p ~/test-results/junit/
               find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
           when: always
