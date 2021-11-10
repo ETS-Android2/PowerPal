@@ -50,6 +50,6 @@ jobs:
 workflows:
   test-and-build:
     jobs:
-      #- unit-test
-      - my-test
+      - unit-test
+      #- my-test
       #- say-hello
