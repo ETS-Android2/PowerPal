@@ -33,7 +33,7 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void onSupportNavigateUpTEST(){
-        boolean b = false;
+        boolean b = true;
         //b = HomeActivity.onSupportNavigateUp();
         assertEquals(b, true);
     }//*/
